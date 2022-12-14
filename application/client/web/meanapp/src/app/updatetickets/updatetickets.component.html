@@ -1,0 +1,58 @@
+<h2 class="screen-align">Updatetickets</h2>
+<div id="template-i7pg" class="gjs-row">
+    <div id="template-i32v" class="gjs-cell">
+        <label id="template-ifh6" class="label ">
+            <div id="template-ixxh7" class="">Name</div>
+        </label>
+        <input id="template-i6cen" [(ngModel)]="tickets.name" [ngModelOptions]="{standalone: true}"
+        ngDefaultControlclass="input form-control " />
+    </div>
+    <div id="template-ic0a" class="gjs-cell">
+        <label id="template-izopz" class="label ">
+            <div id="template-iwx8k" class="">Description</div>
+        </label>
+        <input id="template-iaxjp" [(ngModel)]="tickets.description" [ngModelOptions]="{standalone: true}"
+        ngDefaultControlclass="input form-control " />
+    </div>
+    <div id="template-i3rj" class="gjs-cell">
+        <label id="template-iazem" class="label ">
+            <div id="template-iu51k" class="">CallerName</div>
+        </label>
+        <input id="template-ien6z" [(ngModel)]="tickets.callername" [ngModelOptions]="{standalone: true}"
+        ngDefaultControlclass="input form-control " />
+    </div>
+</div>
+<div id="template-iis5" class="gjs-row">
+    <div id="template-i6pr" class="gjs-cell">
+        <label id="template-igz16" class="label ">
+            <div id="template-iba89" class="">Types</div>
+        </label>
+        <div id="template-in4rd" class="">
+            <ng-select id="template-ilpth" name="dynamicdropdown_template-ilpth" [searchable]="true"
+            [virtualScroll]="true" [items]="typesitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="tickets.types" [ngModelOptions]="{standalone: true}" ngDefaultControl(click)="typesGpGetAllValues()"
+            class="form-control "></ng-select>
+        </div>
+        <div value="1" id="template-ikzay" class="">
+            <div id="template-i1ze5" class="">1</div>
+        </div>
+        <button id="template-i9vrx" (click)="GpUpdate()" class="button btn btn-primary ">
+            <div id="template-ici87" class="">Update</div>
+        </button>
+    </div>
+    <div id="template-igxf" class="gjs-cell">
+        <label id="template-iddox" class="label ">
+            <div id="template-i9jb5" class="">Severity</div>
+        </label>
+        <div id="template-iyjui" class="">
+            <ng-select id="template-it2ap" name="dynamicdropdown_template-it2ap" [searchable]="true"
+            [virtualScroll]="true" [items]="severityitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="tickets.severity" [ngModelOptions]="{standalone: true}" ngDefaultControl(click)="severityGpGetAllValues()"
+            class="form-control "></ng-select>
+        </div>
+        <div value="1" id="template-iggxg" class="">
+            <div id="template-i6vun" class="">1</div>
+        </div>
+    </div>
+    <div id="template-i861" class="gjs-cell"></div>
+</div>

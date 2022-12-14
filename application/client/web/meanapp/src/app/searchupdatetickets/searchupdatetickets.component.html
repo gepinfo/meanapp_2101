@@ -1,0 +1,65 @@
+<h2 class="screen-align">Searchupdatetickets</h2>
+<div id="template-is3w" class="gjs-row">
+    <div id="template-ifba" class="gjs-cell">
+        <label id="template-ijou" class="label ">
+            <div id="template-ipahp" class="">Name</div>
+        </label>
+        <input id="template-ia3ct" [(ngModel)]="tickets.name" [ngModelOptions]="{standalone: true}"
+        ngDefaultControlclass="input form-control " />
+    </div>
+    <div id="template-ibrc" class="gjs-cell">
+        <label id="template-iy9b9" class="label ">
+            <div id="template-itoz3" class="">Description</div>
+        </label>
+        <input id="template-izopm" [(ngModel)]="tickets.description" [ngModelOptions]="{standalone: true}"
+        ngDefaultControlclass="input form-control " />
+    </div>
+    <div id="template-ihfc" class="gjs-cell">
+        <label id="template-i0l94" class="label ">
+            <div id="template-iir8t" class="">Callername</div>
+        </label>
+        <input id="template-iv77k" [(ngModel)]="tickets.callername" [ngModelOptions]="{standalone: true}"
+        ngDefaultControlclass="input form-control " />
+    </div>
+</div>
+<div id="template-iwsh" class="gjs-row">
+    <div id="template-iolj" class="gjs-cell">
+        <label id="template-ixihx" class="label ">
+            <div id="template-idjay" class="">Types</div>
+        </label>
+        <div id="template-ig3nv" class="">
+            <ng-select id="template-il8q7" name="dynamicdropdown_template-il8q7" [searchable]="true"
+            [virtualScroll]="true" [items]="typesitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="tickets.types" [ngModelOptions]="{standalone: true}" ngDefaultControl(click)="typesGpGetAllValues()"
+            class="form-control "></ng-select>
+        </div>
+        <div value="1" id="template-ieum7" class="">
+            <div id="template-ikd6i" class="">1</div>
+        </div>
+        <button id="template-iq8oi" (click)="GpSearch()" class="button btn btn-primary ">
+            <div id="template-ipzdy" class="">search</div>
+        </button>
+    </div>
+    <div id="template-iiy7" class="gjs-cell">
+        <label id="template-id2n3" class="label ">
+            <div id="template-it7je" class="">Severity</div>
+        </label>
+        <div id="template-iskpe" class="">
+            <ng-select id="template-ie7iv" name="dynamicdropdown_template-ie7iv" [searchable]="true"
+            [virtualScroll]="true" [items]="severityitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="tickets.severity" [ngModelOptions]="{standalone: true}" ngDefaultControl(click)="severityGpGetAllValues()"
+            class="form-control "></ng-select>
+        </div>
+        <div value="1" id="template-i9xhk" class="">
+            <div id="template-iiwtk" class="">1</div>
+        </div>
+    </div>
+    <div id="template-imo7" class="gjs-cell"></div>
+</div>
+<div name="grid_template-iudg4" id="template-iudg4">
+    <ag-grid-angular #agGrid style="width: 100%; height: 100%;" id="myGrid"
+    class="ag-theme-balham" [columnDefs]="columnDefs" [pagination]="true" [paginationPageSize]="paginationPageSize"
+    [defaultColDef]="defaultColDef" [rowData]="rowData" [rowSelection]="rowSelection"
+    (gridReady)="onGridReady($event)" domLayout='autoHeight'></ag-grid-angular>
+</div>
+<div id="myGrid" class="ag-theme-alpine "></div>
